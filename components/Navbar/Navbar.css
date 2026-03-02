@@ -1,0 +1,98 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(6px);
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__box {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    cursor: pointer;
+}
+
+.navbar__list {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.logo__text {
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+
+.navbar__link {
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: white;
+}
+
+.box__two {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.play {
+    width: 30px;
+    height: 30px;
+}
+
+.btn {
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.search-box input {
+    position: absolute;
+    right: 37%;
+    width: 180px;
+    background: black;
+    border: 1px solid #555;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.search-box.active input {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.search-icon {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}

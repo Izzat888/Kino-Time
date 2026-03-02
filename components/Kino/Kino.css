@@ -1,0 +1,74 @@
+.kino {
+  background: #000;
+  padding: 60px 0;
+}
+
+.kino__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kino__item {
+  background: #0f0f0f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border 0.3s ease;
+}
+
+.kino__item:hover {
+  transform: translateY(-10px);
+  border: 1px solid rgba(255, 204, 0, 0.6);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(255, 204, 0, 0.25);
+}
+
+.kino__avatar {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.kino__item:hover .kino__avatar {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+.kino__title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 14px 6px;
+  margin: 0;
+}
+
+.kino__link {
+  display: block;
+  margin: 10px 14px 16px;
+  padding: 9px 0;
+  text-align: center;
+  color: #000;
+  background: #ffcc00;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.kino__link:hover {
+  background: #ffd633;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+}
