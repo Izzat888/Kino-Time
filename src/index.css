@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
