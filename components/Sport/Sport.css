@@ -1,25 +1,18 @@
-.kino {
-  background: #000;
-  padding: 60px 0;
+.sport {
+    background: #000;
+    padding: 60px 0;
+    margin-top: -80px;
 }
 
-.kino__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 28px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.sport__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.kino__title1{
-  color: #f40707;
-  text-align: center;
-  font-size: 40px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 60px;
-}
-.kino__item {
+.sport__item {
   background: #0f0f0f;
   border-radius: 16px;
   overflow: hidden;
@@ -29,7 +22,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.kino__item:hover {
+.sport__item:hover {
   transform: translateY(-10px);
   border: 1px solid rgba(255, 204, 0, 0.6);
   box-shadow:
@@ -37,19 +30,26 @@
     0 0 20px rgba(255, 204, 0, 0.25);
 }
 
-.kino__avatar {
+.sport__avatar {
   width: 100%;
   height: 320px;
   object-fit: cover;
   transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.kino__item:hover .kino__avatar {
+.sport__item:hover .sport__avatar {
   transform: scale(1.08);
   filter: brightness(1.1);
 }
-
-.kino__title {
+.sport__title1{
+  color: #f40707;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 60px;
+}
+.sport__title {
   color: #07f0f4;
   font-size: 20px;
   letter-spacing: 1px;
@@ -59,7 +59,7 @@
   margin: 0;
 }
 
-.kino__text {
+.sport__text {
   color: whitesmoke;
   font-size: 18px;
   font-weight: 500;
@@ -67,7 +67,7 @@
   text-align: center;
   padding: 12px;
 }
-.kino__text2 {
+.sport__text2 {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
@@ -77,7 +77,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.kino__link {
+
+.sport__link {
   display: block;
   margin: 10px 14px 16px;
   padding: 9px 0;
@@ -94,48 +95,48 @@
     box-shadow 0.2s ease;
 }
 
-.kino__link:hover {
+.sport__link:hover {
   background: #ffd633;
   transform: scale(1.05);
   box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
 }
 /* Tablet */
 @media (max-width: 992px) {
-  .kino__title1 {
+  .sport__title1 {
     font-size: 32px;
   }
 
-  .kino__avatar {
-    height: 240px;
+  .sport__avatar {
+    height: 320px;
   }
 }
 
 /* Mobile */
 @media (max-width: 576px) {
 
-  .kino {
+  .sport {
     padding: 60px 0;
   }
 
-  .kino__list {
+  .sport__list {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  .kino__title1 {
+  .sport__title1 {
     font-size: 24px;
     margin-bottom: 40px;
   }
 
-  .kino__avatar {
-    height: 200px;
+  .sport__avatar {
+    height: 320px;
   }
 
-  .kino__title {
+  .sport__title {
     font-size: 18px;
   }
 
-  .kino__text {
+  .sport__text {
     font-size: 14px;
   }
 }

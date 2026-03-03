@@ -11,11 +11,14 @@ const Kino = ({ search }) => {
     return (
         <div className='kino'>
             <div className='container'>
+                <h2 className='kino__title1'>🎬 Смотрите мультфильм и получайте удовольствие!</h2>
                 <ul className='kino__list'>
                     {filteredData.map(el => (
                         <li key={el.id} className='kino__item'>
-                            <img className='kino__avatar' width={300} height={150} src={el.avatar} alt={el.title} />
+                            <img className='kino__avatar' src={el.avatar} alt={el.title} />
                             <h3 className='kino__title'>{el.title}</h3>
+                            <p className='kino__text'>{el.text}</p>
+                            <i className='kino__text2'>{el.text2}</i>
                             <a className='kino__link' href={el.url} target="_blank">Смотреть</a>
                         </li>
                     ))}

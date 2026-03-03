@@ -1,4 +1,5 @@
 import React from 'react'
+import down from "../Header/images/down.png"
 import "./Header.css"
 const Header = () => {
     return (
@@ -7,6 +8,7 @@ const Header = () => {
                 <div className='header__container'>
                     <h1 className='header__title'>Мир кино начинается здесь</h1>
                     <p className='header__text'>Самые новые и популярные фильмы — всё на одной платформе</p>
+                    <a className='header__link' href="#multfilm"><img className='down' src={down} alt="" /></a>
                 </div>
             </div>
         </header>

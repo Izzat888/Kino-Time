@@ -1,98 +1,217 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0);
-    backdrop-filter: blur(0px);
-    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(0px);
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
 }
 
 .navbar__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar__box {
-    display: flex;
-    align-items: center;
-    gap: 1px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  cursor: pointer;
 }
 
 .navbar__list {
-    display: flex;
-    align-items: center;
-    gap: 35px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
 }
 
 .logo {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .logo__text {
-    color: white;
-    font-size: 23px;
-    letter-spacing: 2px;
+  font-size: 23px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, red, orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar__link {
-    font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 400;
-    color: white;
+  position: relative;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar__link:hover {
+  background: linear-gradient(90deg, red, orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, red, orange, yellow);
+  transition: width 0.4s ease;
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .box__two {
-    display: flex;
-    gap: 8px;
-    cursor: pointer;
+  position: relative;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.box__two::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, red, orange, yellow);
+  transition: width 0.4s ease;
+}
+
+.box__two:hover::after {
+  width: 100%;
+  left: 0;
 }
 
 .play {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .btn {
-    font-size: 20px;
-    letter-spacing: 1px;
-    color: white;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
 }
 
-.search-box input {
-    position: absolute;
-    right: 37%;
-    width: 180px;
-    background: black;
-    border: 1px solid #555;
-    color: white;
-    padding: 6px 10px;
-    border-radius: 6px;
-    outline: none;
-    font-size: 18px;
-    pointer-events: none;
-    transform: translateX(10px);
-    transition: all 0.3s ease;
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.search-box.active input {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateX(0);
+.input {
+  position: absolute;
+  right: 40px;
+  width: 250px;
+  opacity: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #555;
+  background: black;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transform: translateX(20px);
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
 
+.search-box.active .input {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
 .search-icon {
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-    z-index: 2;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.search-icon:hover {
+  background: linear-gradient(90deg, red, orange, yellow);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(255, 100, 0, 0.7));
+}
+
+.bars {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+
+.modal-overlay .navbar__list {
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (max-width: 992px) {
+
+  .navbar__list {
+    display: none;
+  }
+
+  .modal-overlay .navbar__list {
+    display: flex;
+  }
+
+  .modal-overlay .box__two {
+    display: flex;
+  }
+
+  .box__two {
+    display: none;
+  }
+
+  .bars {
+    display: flex;
+  }
+
 }
